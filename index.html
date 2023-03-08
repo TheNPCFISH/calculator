@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Calculator</title>
+    <title>Fullscreen Calculator</title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
@@ -15,22 +15,22 @@
         <button onclick="getResult('%')">%</button>
         <button onclick="getResult('(')">(</button>
         <button onclick="getResult(')')">)</button>
-        <button onclick="getResult('/')">÷</button>
-        <button onclick="getResult('*')">x</button>
         <button onclick="getResult('7')">7</button>
         <button onclick="getResult('8')">8</button>
         <button onclick="getResult('9')">9</button>
-        <button onclick="getResult('-')">-</button>
+        <button onclick="getResult('/')">÷</button>
         <button onclick="getResult('4')">4</button>
         <button onclick="getResult('5')">5</button>
         <button onclick="getResult('6')">6</button>
-        <button onclick="getResult('+')">+</button>
+        <button onclick="getResult('*')">x</button>
         <button onclick="getResult('1')">1</button>
         <button onclick="getResult('2')">2</button>
         <button onclick="getResult('3')">3</button>
-        <button onclick="getResult('=')">=</button>
-        <button onclick="getResult('0')">0</button>
+        <button onclick="getResult('-')">-</button>
+        <button class="zero" onclick="getResult('0')">0</button>
         <button onclick="getResult('.')">.</button>
+        <button class="equals" onclick="getResult('=')">=</button>
+        <button class="plus" onclick="getResult('+')">+</button>
       </div>
     </div>
     <script src="script.js"></script>
