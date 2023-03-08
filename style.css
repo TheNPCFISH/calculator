@@ -9,6 +9,9 @@ html, body {
   flex-direction: column;
 }
 
+textarea {
+  resize: none;
+}
 .output {
   flex: 1;
   display: flex;
