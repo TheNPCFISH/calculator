@@ -1,16 +1,13 @@
+let result = document.getElementById('result');
+
 function getResult(value) {
-  var result = document.getElementById("result");
-  if (value === "=") {
-    result.value = eval(result.value);
-  } else if (value === "C") {
-    result.value = "";
-  } else {
-    result.value += value;
-  }
-  result.style.fontSize = Math.max(12, Math.min(48, 240 / result.value.length)) + "px";
+   if (value === '=') {
+     result.value = eval(result.value);
+   } else {
+     result.value += value;
+   }
 }
 
-window.addEventListener("resize", function() {
-  var result = document.getElementById("result");
-  result.style.fontSize = Math.max(12, Math.min(48, 240 / result.value.length)) + "px";
-});
+function clearResult() {
+   result.value = '';
+}
