@@ -55,35 +55,3 @@ html, body {
 .buttons button:active {
   background-color: #555;
 }
-
-/* Added CSS below */
-
-.buttons button:nth-child(1) {
-  grid-column: span 2;
-}
-
-.buttons button:nth-child(2) {
-  grid-column: span 1;
-}
-
-.buttons button:nth-child(1)::after {
-  content: 'CE';
-  font-size: 24px;
-  display: block;
-  margin-top: 5px;
-}
-
-.buttons button:nth-child(2)::after {
-  content: 'C';
-  font-size: 36px;
-  display: block;
-  margin-top: -5px;
-}
-
-.buttons button:nth-child(2):hover {
-  background-color: #800000;
-}
-
-.buttons button:nth-child(2):active {
-  background-color: #a00000;
-}
