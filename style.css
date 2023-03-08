@@ -3,7 +3,9 @@ html, body {
   margin: 0;
   background-color:#444;
 }
-
+.small-buttons {
+  width:50%;
+}
 .calculator {
   height: 100%;
   display: flex;
