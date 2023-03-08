@@ -5,6 +5,7 @@ html, body {
 }
 .small-buttons {
   width:50%;
+  height:100%
 }
 .calculator {
   height: 100%;
