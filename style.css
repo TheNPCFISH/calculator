@@ -4,7 +4,7 @@ html, body {
   background-color:#444;
 }
 .small-buttons button {
-  width:100%;
+  width:50%;
   height:100%;
 }
 .calculator {
