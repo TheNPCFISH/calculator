@@ -4,8 +4,8 @@ html, body {
   background-color:#444;
 }
 .small-buttons input {
-  width:50%;
-  height:100%;
+  /*width:50%;
+  height:100%;*/
 }
 .calculator {
   height: 100%;
