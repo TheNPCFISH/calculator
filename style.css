@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   background-color:#444;
 }
-.small-buttons {
+.small-buttons input {
   width:50%;
   height:100%;
 }
