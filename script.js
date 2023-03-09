@@ -1,17 +1,19 @@
-let result = document.getElementById('result');
+const gpu = new GPU();
 
-function getResult(value) {
-  if (value === '=') {
-    result.value = eval(result.value);
+const getResult = gpu.createKernel(function(input) {
+  let result = '';
+  if (input[this.thread.x] === '=') {
+    result = eval(this.output[0]);
   } else {
-    result.value += value;
+    result = this.output[0] + input[this.thread.x];
   }
-}
+  return result;
+}).setOutput([1]);
 
-function clearAll() {
-  result.value = '';
-}
+const clearAll = gpu.createKernel(function() {
+  return '';
+}).setOutput([1]);
 
-function removeLastChar() {
-  result.value = result.value.slice(0, -1);
-}
+const removeLastChar = gpu.createKernel(function(input) {
+  return input.slice(0, -1);
+}).setOutput([1]);
