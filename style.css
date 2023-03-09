@@ -3,10 +3,10 @@ html, body {
   margin: 0;
   background-color:#444;
 }
-.small-buttons button {
+/*.small-buttons button {
   width:50%;
   height:100%;
-}
+}*/
 .calculator {
   height: 100%;
   display: flex;
