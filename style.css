@@ -46,6 +46,7 @@ html, body {
   background-color: #555;
 }
 .small-buttons {
+  flex:2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
