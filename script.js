@@ -15,35 +15,43 @@ if (hasGPU()) {
     let result = '';
     if (input[this.thread.x] === '=') {
       result = eval(this.output[0]);
+      document.getElementById('result').value = result;
     } else {
       result = this.output[0] + input[this.thread.x];
+      document.getElementById('result').value = result;
     }
     return result;
   }).setOutput([1]);
 
   clearAll = gpu.createKernel(function() {
+    document.getElementById('result').value = '';
     return '';
   }).setOutput([1]);
 
   removeLastChar = gpu.createKernel(function(input) {
-    return input.slice(0, -1);
+    const result = input.slice(0, -1);
+    document.getElementById('result').value = result;
+    return result;
   }).setOutput([1]);
 } else {
   getResult = (input) => {
     let result = '';
     if (input === '=') {
-      result = eval(result.value);
+      result = eval(document.getElementById('result').value);
+      document.getElementById('result').value = result;
     } else {
-      result = result.value + input;
+      result = document.getElementById('result').value + input;
+      document.getElementById('result').value = result;
     }
     return result;
   }
 
   clearAll = () => {
-    result.value = '';
+    document.getElementById('result').value = '';
   }
 
   removeLastChar = () => {
-    result.value = result.value.slice(0, -1);
+    const result = document.getElementById('result').value.slice(0, -1);
+    document.getElementById('result').value = result;
   }
 }
